@@ -1,0 +1,95 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.4",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "dg",
+          "informationUri": "https://dg.org",
+          "rules": [
+            {
+              "id": "no-smiley",
+              "shortDescription": {
+                "text": "smileys are a security risk."
+              },
+              "helpUri": "https://www.google.com/?q=no-smiley",
+              "help": {
+                "text": "https://www.google.com/?q=no-smiley"
+              },
+              "properties": {
+                "category": "category 1"
+              }
+            },
+            {
+              "id": "no-assert-true",
+              "shortDescription": {
+                "text": "silly assertions are not allowed."
+              },
+              "helpUri": "hhttps://www.google.com/?q=no-assert-true",
+              "help": {
+                "text": "https://www.google.com/?q=no-assert-true"
+              },
+              "properties": {
+                "category": "category 2"
+              }
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///home/runner/work/dg/dg/src/main/java/com/mycompany/app/App.java"
+          }
+        }
+      ],
+      "results": [
+        {
+          "level": "warning",
+          "message": {
+            "text": ":-) is a security risk"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/dg/dg/src/test/java/com/mycompany/app/AppTest.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 14
+                }
+              }
+            }
+          ],
+          "ruleId": "no-smiley",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "not a good idea!"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/dg/dg/src/test/java/com/mycompany/app/AppTest.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 8
+                }
+              }
+            }
+          ],
+          "ruleId": "no-assert-true",
+          "ruleIndex": 1
+        }
+      ]
+    }
+  ]
+}
