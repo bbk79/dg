@@ -12,26 +12,12 @@
               "id": "no-smiley",
               "shortDescription": {
                 "text": "smileys are a security risk."
-              },
-              "helpUri": "https://www.google.com/?q=no-smiley",
-              "help": {
-                "text": "https://www.google.com/?q=no-smiley"
-              },
-              "properties": {
-                "category": "category 1"
               }
             },
             {
               "id": "no-assert-true",
               "shortDescription": {
                 "text": "silly assertions are not allowed."
-              },
-              "helpUri": "hhttps://www.google.com/?q=no-assert-true",
-              "help": {
-                "text": "https://www.google.com/?q=no-assert-true"
-              },
-              "properties": {
-                "category": "category 2"
               }
             }
           ]
